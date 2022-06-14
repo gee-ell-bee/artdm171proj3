@@ -1,0 +1,65 @@
+
+******************** CABRITO DIDONE CONDENSED: ***********************************
+
+Cabrito Didone Condensed Medium:
+ font-family: cabrito-didone-condensed, sans-serif;
+ font-weight: 500;
+ font-style: normal;
+ 
+Cabrito Didone Condesnsed Medium Italic:
+ font-family: cabrito-didone-condensed, sans-serif;
+ font-weight: 500;
+ font-style: italic;
+  
+Cabrito Didone Condensed Bold:
+ font-family: cabrito-didone-condensed, sans-serif;
+ font-weight: 700;
+ font-style: normal;
+
+
+
+********************* KEPLER STD: ***************************************************
+    
+-------------- REGULAR --------------------------------------------------------------
+Kepler Std Regular
+ font-family: kepler-std, serif;
+ font-weight: 400;
+ font-style: normal;
+
+Kepler Std Italic
+ font-family: kepler-std, serif;
+ font-weight: 400;
+ font-style: italic;
+
+Kepler Std Bold
+ font-family: kepler-std, serif;
+ font-weight: 700;
+ font-style: normal;
+
+Kepler Std Bold Italic
+ font-family: kepler-std, serif;
+ font-weight: 700;
+ font-style: italic;
+
+
+-------------- DISPLAY --------------------------------------------------------------
+
+Kepler Std Display
+ font-family: kepler-std-display, serif;
+ font-weight: 400;
+ font-style: normal;
+
+Kepler Std Semibold Display
+ font-family: kepler-std-display, serif;
+ font-weight: 600;
+ font-style: normal;
+
+Kepler Std Semibold Italic Display
+ font-family: kepler-std-display, serif;
+ font-weight: 600;
+ font-style: italic;
+
+Kepler Std Bold Italic Display
+ font-family: kepler-std-display, serif;
+ font-weight: 700;
+ font-style: italic;                                  
