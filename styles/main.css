@@ -260,11 +260,11 @@
     @media screen and (min-width: 500px) {
         /* #region TABLET & up header */
             header {
-                padding: 3vmin 6vmin;
+                padding: 0;
             }
 
             section.hdr.title {
-                padding: 6vh 0;
+                padding: 5vh 0;
                 display: flex;
                 justify-content: center;
                 grid-template-columns: 1fr 1fr;
