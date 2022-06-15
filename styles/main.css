@@ -18,6 +18,13 @@
             --bodyTxtColor: #000000;
             --bodyBgColor: #ebebeb;
             --wholeMaxWidth: 1200px;
+            --hdrFontSzMob: 1.5rem;
+            --hdrFontSzMid: 2rem;
+            --hdrFontSzTab: 3rem;
+            --subhdrFontSzMob: .9rem; /* proportional size based on styletile for hdrFontSzMob */
+            --subhdrFontSzMid: 1rem;/* ((x / 1.5rem) = (24px/44px)) = approx .82rem */
+            --subhdrFontSzTab: 1.25rem;  /*    "      "   = (24px/60px)) = approx .6rem */
+                                      /* ((x / 2rem))  =    "    "    = approx .8rem */
 
             /* headers */
                 --hdrColor: #005f9a;
@@ -100,7 +107,7 @@
 
         header h1.title, header h2.subtitle {
             text-transform:uppercase;
-            font-size: 1.5rem;
+            font-size: var(--hdrFontSzMob);
             line-height: 1;
         }
 
@@ -157,6 +164,25 @@
         main {
             max-width: 1200px;
             margin: auto;
+        }
+
+        main section.text {
+            padding: 5vmin;
+        }
+
+        section.hdg h1 {
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        section.hdg h1.hdg {
+            font-size: var(--hdrFontSzMob);
+        }
+
+        section.hdg h1.sub {
+            text-transform: uppercase;
+            font-size: var(--subhdrFontSzMob);
         }
     /* #endregion */
 
@@ -252,7 +278,7 @@
             }
 
             header h1.title, header h2.subtitle {
-                font-size: 2rem;
+                font-size: var(--hdrFontSzMid);
             }
 
             header h1.title {
@@ -273,11 +299,22 @@
                 
         /* #endregion */
 
+        /* #region TABLET & up content */
+            section.hdg h1.hdg {
+                font-size: var(--hdrFontSzMid);
+            }
+
+            section.hdg h1.sub {
+                padding: 0 7vw;
+                font-size: var(--subhdrFontSzMid);
+            }
+        /* #endregion */
+
         /* #region TABLET & up footer */
             footer {
                 row-gap: 0;
                 margin: 3rem auto 2rem auto;
-                padding: 4vmin;
+                padding: 2rem;
             }
 
             hr {
@@ -303,10 +340,18 @@
     }
     /* #endregion */
 
-    /* #region MID-SIZE & up media query */
+    /* #region Tab-SIZE & up media query */
     @media screen and (min-width: 750px) {
         header h1.title, header h2.subtitle {
-            font-size: 3rem;
+            font-size: var(--hdrFontSzTab);
+        }
+
+        section.hdg h1.hdg {
+            font-size: var(--hdrFontSzTab);
+        }
+
+        section.hdg h1.sub {
+            font-size: var(--subhdrFontSzTab);
         }
 
         header nav ul li a {
@@ -320,3 +365,5 @@
         footer {page-break-after: always;}
     }
     /* #endregion */
+
+/* #endregion */
