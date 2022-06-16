@@ -21,10 +21,10 @@
             --hdrFontSzMob: 1.5rem;
             --hdrFontSzMid: 2rem;
             --hdrFontSzTab: 3rem;
-            --subhdrFontSzMob: .9rem; /* proportional size based on styletile for hdrFontSzMob */
-            --subhdrFontSzMid: 1rem;/* ((x / 1.5rem) = (24px/44px)) = approx .82rem */
-            --subhdrFontSzTab: 1.25rem;  /*    "      "   = (24px/60px)) = approx .6rem */
-                                      /* ((x / 2rem))  =    "    "    = approx .8rem */
+            --subhdrFontSzMob: .9rem;   /* proportional size based on styletile for hdrFontSzMob */
+            --subhdrFontSzMid: 1rem;    /* ((x / 1.5rem) = (24px/44px)) = approx .82rem */
+            --subhdrFontSzTab: 1.25rem; /*    "      "   = (24px/60px)) = approx .6rem */
+                                        /* ((x / 2rem))  =    "    "    = approx .8rem */
 
             /* headers */
                 --hdrColor: #005f9a;
@@ -94,11 +94,15 @@
     
     /* #region MOBILE header */
         header {
+            position: sticky;
+            top: 0;
+            left: 0;
             background-image: url(../images/headerimg.jpg);
+            width: 100%;
         }
 
         header div.wrapper {
-            max-width: calc(50px + var(--wholeMaxWidth));
+            max-width: calc(100px + var(--wholeMaxWidth));
             margin: auto;
         }
 
@@ -384,20 +388,31 @@
             }
 
             section.hdg {
-                margin: 2rem 0;
+                margin: 1rem 0;
             }
         /* #endregion */
 
         /* #region TABLET & up footer */
+        /* #endregion */
         
     }
     /* #endregion */
 
+    /* #region LARGE & up media query */
     @media screen and (min-width: 1201px) {
+
+        header {
+            padding: 1rem;
+        }
+        header h1.title {
+            margin-right: -.25rem;
+        }
+        
         main {
             margin-top: 2rem;
         }
     }
+    /* #endregion */
 
     /* #region PRINT */
     @media print {
