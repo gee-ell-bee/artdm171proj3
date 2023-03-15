@@ -8,7 +8,6 @@
     }
     
     html, body {
-        height: 100%;
         font-size: 22px;
     }
     
@@ -95,8 +94,8 @@
     /* #region MOBILE header */
         header {
             position: sticky;
-            top: 0;
-            left: 0;
+            position: -webkit-sticky;
+            top: -20%;
             background-image: url(../images/headerimg.jpg);
             width: 100%;
         }
@@ -199,6 +198,19 @@
             font-size: var(--subhdrFontSzMob);
             line-height: 1.5;
         }
+
+        a.highlight {
+            text-decoration: none;
+            text-align: center;
+            color: #cc0e26;
+            font-size: 1.4em;
+            font-family: cabrito-didone-condensed;
+            font-weight: 500;
+            font-style: italic;
+            
+            -webkit-font-smoothing:none;
+            margin: .25em;
+           }
     /* #endregion */
 
     /* #region MOBILE footer */
@@ -277,6 +289,7 @@
         /* #region MIDSIZE & up header */
             header {
                 padding: 0;
+                top: -25%;
             }
 
             section.hdr.title {
@@ -403,7 +416,9 @@
 
         header {
             padding: 1rem;
+            top: -13rem;
         }
+
         header h1.title {
             margin-right: -.25rem;
         }
