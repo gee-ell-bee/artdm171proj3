@@ -17,6 +17,7 @@
             --bodyTxtColor: #000000;
             --bodyBgColor: #ebebeb;
             --wholeMaxWidth: 1200px;
+            --hdrPaddingMob: 5vh;
             --hdrFontSzMob: 1.5rem;
             --hdrFontSzMid: 2rem;
             --hdrFontSzTab: 3rem;
@@ -168,48 +169,82 @@
     /* #region MOBILE content */
         main {
             max-width: 1200px;
-            margin: auto;
+            margin: 3vmin;
         }
 
-        main section.text {
-            padding: 5vmin;
-        }
 
-        section.hdg {
+        section.page.header {
             margin: 4vmin auto 5vmin auto;
             display: flex;
             flex-flow: column nowrap;
             gap: 1vmin;
         }
 
-        section.hdg h1 {
+        section.page.header h1 {
             text-align: center;
             font-weight: 600;
             line-height: 1.25;
             color: var(--hdrColor);
         }
 
-        section.hdg h1.hdg {
+        section.header h1.header {
             font-size: var(--hdrFontSzMob);
         }
 
-        section.hdg h1.sub {
+        section.header h1.subheader {
             text-transform: uppercase;
             font-size: var(--subhdrFontSzMob);
             line-height: 1.5;
         }
 
+        
+
         a.highlight {
+            display: block;
             text-decoration: none;
             text-align: center;
             color: #cc0e26;
-            font-size: 1.4em;
+            font-size: 1.25em;
             font-family: cabrito-didone-condensed;
             font-weight: 500;
             font-style: italic;
             
             -webkit-font-smoothing:none;
-            margin: .25em;
+            margin: 1rem auto;
+        }
+
+        blockquote {
+            margin: 1em 1em 3em;
+            border-left: 10px solid #8abac8;
+            padding: 1em 2em;
+            background: hsla(0, 100%, 100%, .6);
+        }
+
+        blockquote.testimon {
+            color: #0d2f4d;
+            font-family: cabrito-didone-condensed, sans-serif;
+            font-weight: 500;
+            font-style: italic;
+            font-size: 1.05em;
+               
+            line-height: 1.5em;
+            margin: 2%;
+        }
+            
+        blockquote.left {
+            margin-top: 2em;
+        
+        }
+        
+        blockquote.right {
+            float: left;
+            border-left: 0px;
+            border-right: 10px solid #8abac8;
+            margin-bottom: 2em;
+        }
+
+        .quoted {
+            float: right;
            }
     /* #endregion */
 
@@ -224,11 +259,6 @@
             text-align: center;
             flex-direction: column;
             row-gap: 6vmin;
-        }
-
-        hr {
-            width: 70%;
-            margin: auto;
         }
 
         footer ul {
@@ -289,11 +319,11 @@
         /* #region MIDSIZE & up header */
             header {
                 padding: 0;
-                top: -25%;
+                /* top: -25%; */
             }
 
             section.hdr.title {
-                padding: 5vh 0;
+                padding: var(--hdrPaddingMob) 0;
                 display: flex;
                 justify-content: center;
                 grid-template-columns: 1fr 1fr;
@@ -303,7 +333,13 @@
             header section.title h2.subtitle {
                 hyphens: none;
                 word-break: keep-all;
-                width: 10%;
+                width: max-content;
+            }
+
+            h1.title span.title,
+            h2.subtitle span.subtitle {
+                display:block;
+                width: 100%;
             }
 
             header h1.title, header h2.subtitle {
