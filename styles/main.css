@@ -181,7 +181,6 @@
 
 
         section.page.header {
-            /* margin: 4vmin auto 5vmin auto; */
             display: flex;
             flex-flow: column nowrap;
             gap: 1vmin;
@@ -210,7 +209,7 @@
         }
 
         figure+h2 {
-            margin-top: 3vmin;
+            margin-top: 1vmin;
         }
         
         p+p {
@@ -218,11 +217,15 @@
         }
 
         section.hilgtdLink {
-            margin: 7vmin 0;
+            margin: 4vmin 0;
         }
 
         section.about+section.about {
-            margin-top: 10vmin;
+            margin-top: 7vmin;
+        }
+
+        section.about>section.hilgtdLink {
+            margin: 0 0 4vmin 0;
         }
 
 
@@ -243,7 +246,7 @@
             display: flex;
             flex-flow: column nowrap;
             gap: 5vmin;
-            margin: 10vmin auto;
+            margin: 7vmin auto;
         }
 
         blockquote {
@@ -512,13 +515,22 @@
         /* #endregion */
 
         /* #region MIDSIZE & up content */
-            section.hdg h1.header {
-                font-size: var(--hdrFontSzMid);
+
+            article {
+                margin-top: 5vmin;
             }
 
-            section.hdg h1.subheader {
-                padding: 0 7vw;
-                font-size: var(--subhdrFontSzMid);
+            section.header {
+                gap: 0;
+                margin-bottom: 3vh;
+            }
+            
+            section.header h1.header {
+                font-size: var(--hdrFontSzTab);
+            }
+
+            section.header h1.subheader {
+                font-size: var(--subhdrFontSzTab);
             }
 
             a.highlight {
@@ -526,12 +538,8 @@
             }
 
             blockquote {
-                margin: 1rem 1rem 3rem;
                 border-left: 10px solid var(--accentColor);
                 padding: 1rem 2rem;
-                
-                font-size: 1.05rem;
-                line-height: 1.5;
             }
 
             blockquote.testimon {
@@ -558,10 +566,6 @@
                 margin: 1rem auto 2rem auto;
                 padding: 0 1rem;
                 row-gap: .25rem;
-            }
-
-            hr {
-                margin: auto auto 1.5rem auto;
             }
 
             footer section.ftr.socials {
@@ -605,16 +609,16 @@
                 margin: 3vmin;
             }
 
-            section.hdg h1.hdg {
+            section.header h1.hdg {
                 font-size: var(--hdrFontSzTab);
             }
 
-            section.hdg h1.sub {
+            section.header h1.sub {
                 font-size: var(--subhdrFontSzTab);
                 padding: 0;
             }
 
-            section.hdg {
+            section.header {
                 margin: 1rem 0;
             }
 
