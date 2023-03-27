@@ -175,9 +175,13 @@
             margin: 3vmin;
         }
 
+        article {
+            margin-top: 10vmin;
+        }
+
 
         section.page.header {
-            margin: 4vmin auto 5vmin auto;
+            /* margin: 4vmin auto 5vmin auto; */
             display: flex;
             flex-flow: column nowrap;
             gap: 1vmin;
@@ -200,14 +204,25 @@
             line-height: 1.5;
         }
 
-        
+
         img {
             margin: auto;
         }
 
+        figure+h2 {
+            margin-top: 3vmin;
+        }
         
         p+p {
             margin-top: 3vmin;
+        }
+
+        section.hilgtdLink {
+            margin: 7vmin 0;
+        }
+
+        section.about+section.about {
+            margin-top: 10vmin;
         }
 
 
@@ -216,19 +231,25 @@
             text-decoration: none;
             text-align: center;
             color: var(--hlgtLinkColor);
-            font-size: 1.25rem;
+            font-size: 1.05rem;
             font-family: cabrito-didone-condensed;
             font-weight: 500;
             font-style: italic;
             
             -webkit-font-smoothing:none;
-            /* margin: 1rem auto; */
+        }
+
+        section.testimonials {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 5vmin;
+            margin: 10vmin auto;
         }
 
         blockquote {
             margin: 1rem 1rem 3rem;
             border-left: 10px solid var(--accentColor);
-            padding: 1rem 2rem;
+            padding: 4vmin 7vmin;
             background: var(--blockqtBgColor);
         }
 
@@ -237,27 +258,21 @@
             font-family: cabrito-didone-condensed, sans-serif;
             font-weight: 500;
             font-style: italic;
-            font-size: 1.05rem;
                
-            line-height: 1.5rem;
-            margin: 2%;
-        }
-            
-        blockquote.left {
-            margin-top: 2rem;
+            line-height: 1.5;
+            margin: 1%;
         }
         
         blockquote.right {
-            float: left;
             border-left: 0px;
             border-right: 10px solid var(--accentColor);
-            margin-bottom: 2rem;
         }
 
         .quoted {
             display: block;
+            margin-top: 2vmin;
             text-align: right;
-            font-size: .9rem;
+            font-size: .75rem;
         }
 
             /* #region MOBILE rooms cards */
@@ -497,13 +512,43 @@
         /* #endregion */
 
         /* #region MIDSIZE & up content */
-            section.hdg h1.hdg {
+            section.hdg h1.header {
                 font-size: var(--hdrFontSzMid);
             }
 
-            section.hdg h1.sub {
+            section.hdg h1.subheader {
                 padding: 0 7vw;
                 font-size: var(--subhdrFontSzMid);
+            }
+
+            a.highlight {
+                font-size: 1.25rem;
+            }
+
+            blockquote {
+                margin: 1rem 1rem 3rem;
+                border-left: 10px solid var(--accentColor);
+                padding: 1rem 2rem;
+                
+                font-size: 1.05rem;
+                line-height: 1.5;
+            }
+
+            blockquote.testimon {
+                color: #0d2f4d;
+                font-family: cabrito-didone-condensed, sans-serif;
+                font-weight: 500;
+                font-style: italic;
+                font-size: 1.05rem;
+                   
+                line-height: 1.5;
+                margin: 2%;
+            }
+
+            .quoted {
+                display: block;
+                text-align: right;
+                font-size: .9rem;
             }
         /* #endregion */
 
