@@ -94,6 +94,7 @@
     
     /* #region MOBILE header */
         header {
+            z-index: 100;
             position: sticky;
             position: -webkit-sticky;
             top: 0vh;
@@ -197,14 +198,16 @@
             line-height: 1.5;
         }
 
-        
+        p+p {
+            margin-top: 3vmin;
+        }
 
         a.highlight {
             display: block;
             text-decoration: none;
             text-align: center;
             color: #cc0e26;
-            font-size: 1.25em;
+            font-size: 1.25rem;
             font-family: cabrito-didone-condensed;
             font-weight: 500;
             font-style: italic;
@@ -214,9 +217,9 @@
         }
 
         blockquote {
-            margin: 1em 1em 3em;
+            margin: 1rem 1rem 3rem;
             border-left: 10px solid #8abac8;
-            padding: 1em 2em;
+            padding: 1rem 2rem;
             background: hsla(0, 100%, 100%, .6);
         }
 
@@ -225,14 +228,14 @@
             font-family: cabrito-didone-condensed, sans-serif;
             font-weight: 500;
             font-style: italic;
-            font-size: 1.05em;
+            font-size: 1.05rem;
                
-            line-height: 1.5em;
+            line-height: 1.5rem;
             margin: 2%;
         }
             
         blockquote.left {
-            margin-top: 2em;
+            margin-top: 2rem;
         
         }
         
@@ -240,12 +243,113 @@
             float: left;
             border-left: 0px;
             border-right: 10px solid #8abac8;
-            margin-bottom: 2em;
+            margin-bottom: 2rem;
         }
 
         .quoted {
             float: right;
            }
+
+            /* #region MOBILE rooms cards */
+                #rooms {
+                    display: grid;
+                    margin: auto;
+                    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+                    grid-template-rows: repeat(6, auto);
+                    justify-content: center;
+                }
+
+                section.rmbox {
+                    margin: .5rem;
+                    padding: 20px;
+                    background-color: #8abbca;
+                    margin-bottom: 3rem;
+                }
+
+                section.rmbox section {
+                    padding: .5rem;
+                }
+
+                section.rmbox>section {
+                    height: 450px;
+                    border: 1px solid black;
+                }
+
+                section.center {
+                    text-align: center;
+                    display: block;
+                }
+
+                section.burgyork {
+                    background: #feda97 no-repeat url(../images/rooms/squares/room2.png) 50% -15%;
+                }
+
+                section.capwks {
+                    background: #feda97 no-repeat url(../images/rooms/squares/room1.png) 70% -10%;
+                }
+
+                section.drwill {
+                    background: #feda97 no-repeat url(../images/rooms/squares/room3.png) 20% -10%;
+                }
+
+                section.drrl {
+                    background:#feda97 no-repeat url(../images/rooms/squares/room4.png) 100% -10%;
+                }
+
+                section.thadth {
+                    background: #feda97 no-repeat url(../images/rooms/squares/room5.png) 0% -15%;
+                }
+
+                section.jarvdns {
+                    background: #feda97 no-repeat url(../images/rooms/squares/room6.png) 80% -20%;
+                }
+
+                section.rmdesc {
+                    position: relative;
+                    height: auto;
+                    top: 200px;
+                }
+
+                a.roomlnk {
+                    display: inline-block;
+                    margin-top: .5em;
+                }
+
+                a.rmsblkbg, a.rmswhtbg {
+                    color: black;
+                    font-family: kepler-std-display;
+                    font-weight: 700;
+                    font-style: italic;
+                    font-size: 1.5em;
+                    text-shadow: 1px 1px 7px hsla(0, 100%, 0%, .5);
+                    text-align: left;
+                }
+                
+                a.rmsblkbg:hover {
+                    opacity: 1;
+                    text-shadow: 0px 0px 5px hsla(0, 100%, 0%, .75);
+                    text-decoration: none;
+                }
+                
+                a.rmswhtbg:hover {
+                    text-decoration: none;
+                    opacity: 1;
+                    text-shadow: 0px 0px 5px hsla(0, 100%, 100%, .75);
+                }
+                
+                a.rmsblkbg:active {
+                    text-shadow: 1px 1px 7px hsla(0, 100%, 0%, .5);
+                }
+                
+                a.rmswhtbg:active {
+                    text-shadow: 1px 1px 7px hsla(0, 100%, 100%, .5);
+                }
+                
+                a.rmswhtbg {
+                    text-shadow: 1px 1px 7px hsla(0, 100%, 100%, .5);
+                    text-align: left;
+                }
+            /* #endregion */
     /* #endregion */
 
     /* #region MOBILE footer */
