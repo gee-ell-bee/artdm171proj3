@@ -35,14 +35,16 @@
                 --linkHvrColor: #6b250242;
                 --navBgColor: #f8b200;
                 --hlgtLinkColor: #cc0e26;
+                --rmCardBgColor: #feda97;
+                --rmCardLinkBgColor: #6b25022b;
             
             /* blockquote */
                 --blockqtBgColor: #f5f5f5;
-                --blockqtBorderColor: #4089b3;
             
             /* misc */
                 --formInputBgColor: #ffffff;
-                --accentBgColor: #8abac8;
+                --accentColor: #8abac8;
+                --darkAccentColor: #4089b3;
 
         /* #endregion */
         font-family: kepler-std, Garamond, serif;
@@ -74,7 +76,7 @@
     /* basic links */
         a {
             font-weight: 500;
-            color:#6b2502;
+            color:var(--linkColor);
             text-decoration: none var(--linkHvrColor);
             transition: all .125s ease-out;
         }
@@ -97,7 +99,7 @@
             z-index: 100;
             position: sticky;
             position: -webkit-sticky;
-            top: 0vh;
+            top: -7.75rem;
             background-image: url(../images/headerimg.jpg);
             width: 100%;
         }
@@ -198,29 +200,36 @@
             line-height: 1.5;
         }
 
+        
+        img {
+            margin: auto;
+        }
+
+        
         p+p {
             margin-top: 3vmin;
         }
+
 
         a.highlight {
             display: block;
             text-decoration: none;
             text-align: center;
-            color: #cc0e26;
+            color: var(--hlgtLinkColor);
             font-size: 1.25rem;
             font-family: cabrito-didone-condensed;
             font-weight: 500;
             font-style: italic;
             
             -webkit-font-smoothing:none;
-            margin: 1rem auto;
+            /* margin: 1rem auto; */
         }
 
         blockquote {
             margin: 1rem 1rem 3rem;
-            border-left: 10px solid #8abac8;
+            border-left: 10px solid var(--accentColor);
             padding: 1rem 2rem;
-            background: hsla(0, 100%, 100%, .6);
+            background: var(--blockqtBgColor);
         }
 
         blockquote.testimon {
@@ -236,25 +245,26 @@
             
         blockquote.left {
             margin-top: 2rem;
-        
         }
         
         blockquote.right {
             float: left;
             border-left: 0px;
-            border-right: 10px solid #8abac8;
+            border-right: 10px solid var(--accentColor);
             margin-bottom: 2rem;
         }
 
         .quoted {
-            float: right;
-           }
+            display: block;
+            text-align: right;
+            font-size: .9rem;
+        }
 
             /* #region MOBILE rooms cards */
                 #rooms {
                     display: grid;
-                    margin: auto;
-                    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+                    margin: 1rem auto;
+                    grid-template-columns:repeat(auto-fill, minmax(325px, 2fr));
                     grid-template-rows: repeat(6, auto);
                     justify-content: center;
                 }
@@ -262,17 +272,19 @@
                 section.rmbox {
                     margin: .5rem;
                     padding: 20px;
-                    background-color: #8abbca;
-                    margin-bottom: 3rem;
+                    background-color: var(--accentColor);
                 }
 
-                section.rmbox section {
-                    padding: .5rem;
+                section.rmbox>section {
+                    padding: 3vmin;
                 }
 
                 section.rmbox>section {
                     height: 450px;
                     border: 1px solid black;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
                 }
 
                 section.center {
@@ -281,38 +293,46 @@
                 }
 
                 section.burgyork {
-                    background: #feda97 no-repeat url(../images/rooms/squares/room2.png) 50% -15%;
+                    background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room2.png) 50% -15%;
                 }
 
                 section.capwks {
-                    background: #feda97 no-repeat url(../images/rooms/squares/room1.png) 70% -10%;
+                    background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room1.png) 70% -10%;
                 }
 
                 section.drwill {
-                    background: #feda97 no-repeat url(../images/rooms/squares/room3.png) 20% -10%;
+                    background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room3.png) 20% -10%;
                 }
 
                 section.drrl {
-                    background:#feda97 no-repeat url(../images/rooms/squares/room4.png) 100% -10%;
+                    background:var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room4.png) 100% -10%;
                 }
 
                 section.thadth {
-                    background: #feda97 no-repeat url(../images/rooms/squares/room5.png) 0% -15%;
+                    background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room5.png) 0% -15%;
                 }
 
                 section.jarvdns {
-                    background: #feda97 no-repeat url(../images/rooms/squares/room6.png) 80% -20%;
+                    background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room6.png) 80% -20%;
                 }
 
                 section.rmdesc {
                     position: relative;
                     height: auto;
-                    top: 200px;
+                    /* top: 200px; */
                 }
 
                 a.roomlnk {
                     display: inline-block;
-                    margin-top: .5em;
+                    margin: 3vmin 0 0 0;
+                    width: 100%;
+                    border-radius: .25rem;
+                    font-size: 1rem;
+                    background-color: var(--rmCardLinkBgColor);
+                }
+
+                a.roomlnk:hover {
+                    background-color: var(--rmCardLinkBgColor);
                 }
 
                 a.rmsblkbg, a.rmswhtbg {
@@ -350,6 +370,7 @@
                     text-align: left;
                 }
             /* #endregion */
+
     /* #endregion */
 
     /* #region MOBILE footer */
@@ -371,6 +392,13 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
+        }
+
+        div.divider {
+            width: 60%;
+            height: 1px;
+            background-color: hsla(0, 0%, 0%, 0.4);
+            margin: 2rem auto 1rem auto;
         }
 
         /* #region MOBILE footer: social media links */
@@ -409,7 +437,7 @@
 /* #region media queries */
 
     /* #region SMALL & up media query */
-    @media screen and (min-width: 201px) {
+    @media screen and (min-width: 235px) {
         header section.title h1.title,
         header section.title h2.subtitle {
             hyphens: none;
@@ -513,9 +541,6 @@
 
     /* #region TABLET & up media query */
     @media screen and (min-width: 750px) {
-        body {
-            font-size: 22px;
-        }
 
         /* #region TABLET & up header */
 
@@ -531,6 +556,10 @@
 
         /* #region TABLET & up content */
 
+            article {
+                margin: 3vmin;
+            }
+
             section.hdg h1.hdg {
                 font-size: var(--hdrFontSzTab);
             }
@@ -543,9 +572,31 @@
             section.hdg {
                 margin: 1rem 0;
             }
+
+            a.highlight {
+                margin: 1rem auto;
+            }
+
+            a.roomlnk {
+                margin: .5rem 0 0 0;
+            }
+
+            blockquote {
+                max-width: 80vw;
+            }
+
+            blockquote.right {
+                float: right;
+            }
         /* #endregion */
 
         /* #region TABLET & up footer */
+
+            div.divider {
+                width: 60%;
+                margin: 2rem auto 1.5rem auto;
+            }
+        
         /* #endregion */
         
     }
@@ -564,7 +615,11 @@
         }
         
         main {
-            margin-top: 2rem;
+            margin: 2rem auto auto auto;
+        }
+
+        a.roomlnk {
+            background-color: transparent;
         }
     }
     /* #endregion */
