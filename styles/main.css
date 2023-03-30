@@ -33,6 +33,7 @@
             /* link colors */
                 --linkColor: #6b2502;
                 --linkHvrColor: #6b250242;
+                --linkBorderColor: #ab744b;
                 --navBgColor: #f8b200;
                 --hlgtLinkColor: #cc0e26;
                 --rmCardBgColor: #feda97;
@@ -43,6 +44,7 @@
             
             /* misc */
                 --formInputBgColor: #ffffff;
+                --lightAccentColor: hsl(194, 36%, 80%);
                 --accentColor: #8abac8;
                 --darkAccentColor: #4089b3;
 
@@ -203,7 +205,6 @@
             line-height: 1.5;
         }
 
-
         img {
             margin: auto;
         }
@@ -228,7 +229,6 @@
             margin: 0 0 4vmin 0;
         }
 
-
         a.highlight {
             display: block;
             text-decoration: none;
@@ -250,7 +250,7 @@
         }
 
         blockquote {
-            margin: 1rem 1rem 3rem;
+            margin: 7vmin 4vmin;
             border-left: 10px solid var(--accentColor);
             padding: 4vmin 7vmin;
             background: var(--blockqtBgColor);
@@ -265,6 +265,13 @@
             line-height: 1.5;
             margin: 1%;
         }
+
+        blockquote.contact {
+            word-wrap:normal;
+            display: flex;
+            flex-flow: column nowrap;
+            row-gap: 2vh;
+        }
         
         blockquote.right {
             border-left: 0px;
@@ -277,6 +284,77 @@
             text-align: right;
             font-size: .75rem;
         }
+
+        table>tbody {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        table * {
+            display: block;
+            min-width: fit-content;
+        }
+
+        table th {
+            text-align: left;
+        }
+
+        table td {
+            width: 100%;
+        }
+
+        section.contact {
+            margin: auto auto 2vh auto;
+        }
+
+        section.email {
+            word-wrap: break-word;
+        }
+
+        span.label {
+            font-weight:bold;
+        }
+
+        form {
+            border: 1.5px solid black;
+            background-color: var(--lightAccentColor);
+            padding: 2vh 6vw;
+        }
+
+        form label {
+            font-weight: bold;
+            width: fit-content;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            padding: auto 3vw;
+        }
+
+        form .input {
+            margin-bottom: 1vh;
+        }
+
+        form .button {
+            cursor: pointer;
+            margin: 1vh auto 1vh auto;
+
+            color: var(--hlgtLinkColor);
+            font-weight: bold;
+            font-size: 1.05rem;
+
+            border: 1.5px solid var(--linkBorderColor);
+            border-radius: 0;
+            background-color:var(--rmCardBgColor);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.28);
+        }
+
+        iframe {
+            margin-top: 2vh;
+        }
+
 
             /* #region MOBILE rooms cards */
                 #rooms {
@@ -460,6 +538,27 @@
         header section.title h2.subtitle {
             hyphens: none;
             word-break: keep-all;
+        }
+
+        table>tbody {
+            gap: 2vmin;
+            width: 100%;
+        }
+
+        table>tbody * {
+            /* min-width: fit-content; */
+            /* max-width: 100%; */
+            width: 100%;
+        }
+
+        table tr {
+        }
+
+
+
+        table td {
+            
+            /* max-width:50%; */
         }
     }
     /* #endregion */
