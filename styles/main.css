@@ -622,6 +622,20 @@
                 margin: 1rem 0;
             }
 
+            section.about.beds figure {
+                float:left;
+                margin: 0 1rem 1rem 0;
+                max-width: 50%;
+            }
+
+            section.about.provincetown {
+                margin: auto;
+            }
+
+            section.about.beds>h2 {
+                margin-top: 0;
+            }
+
             a.highlight {
                 margin: 1rem auto;
             }
