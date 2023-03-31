@@ -307,7 +307,11 @@
             margin: auto auto 2vh auto;
         }
 
-        section.email {
+        section.contact section.map {
+            overflow-x: scroll;
+        }
+
+        blockquote section.email {
             word-wrap: break-word;
         }
 
@@ -315,41 +319,50 @@
             font-weight:bold;
         }
 
-        form {
-            border: 1.5px solid black;
-            background-color: var(--lightAccentColor);
-            padding: 2vh 6vw;
-        }
+        /* #region MOBILE forms */
 
-        form label {
-            font-weight: bold;
-            width: fit-content;
-        }
+            form {
+                border: 1.5px solid black;
+                background-color: var(--lightAccentColor);
+                padding: 2vh 6vw;
+            }
 
-        form input, form textarea {
-            width: 100%;
-            max-width: 100%;
-            min-width: 100%;
-            padding: auto 3vw;
-        }
+            form label {
+                font-weight: bold;
+                width: fit-content;
+            }
 
-        form .input {
-            margin-bottom: 1vh;
-        }
+            form input, form textarea {
+                width: 100%;
+                max-width: 100%;
+                min-width: 100%;
+                padding: 0 3vw;
+            }
 
-        form .button {
-            cursor: pointer;
-            margin: 1vh auto 1vh auto;
+            form textarea {
+                overflow: auto;
+                min-height: 2rem;
+            }
 
-            color: var(--hlgtLinkColor);
-            font-weight: bold;
-            font-size: 1.05rem;
+            form .input {
+                margin-bottom: 1vh;
+            }
 
-            border: 1.5px solid var(--linkBorderColor);
-            border-radius: 0;
-            background-color:var(--rmCardBgColor);
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.28);
-        }
+            form .button {
+                cursor: pointer;
+                margin: 1vh auto 1vh auto;
+
+                color: var(--hlgtLinkColor);
+                font-weight: bold;
+                font-size: 1.05rem;
+
+                border: 1.5px solid var(--linkBorderColor);
+                border-radius: 0;
+                background-color:var(--rmCardBgColor);
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.28);
+            }
+
+        /* #endregion */
 
         iframe {
             margin-top: 2vh;
@@ -546,19 +559,7 @@
         }
 
         table>tbody * {
-            /* min-width: fit-content; */
-            /* max-width: 100%; */
             width: 100%;
-        }
-
-        table tr {
-        }
-
-
-
-        table td {
-            
-            /* max-width:50%; */
         }
     }
     /* #endregion */
@@ -657,6 +658,58 @@
                 text-align: right;
                 font-size: .9rem;
             }
+
+            table>tbody {
+                display: flex;
+                gap: 0;
+            }
+    
+            table * {
+                display: block;
+                min-width: fit-content;
+            }
+
+            table tr {
+                display: grid;
+                grid-template-columns: 4rem 1fr;
+                gap: 2vw;
+            }
+
+            table th {
+                text-align: right;
+            }
+
+            form {
+                padding: 3vh 6vw;
+                display: grid;
+                grid-template-columns: 1fr 4fr;
+                max-width: 100%;
+                column-gap: .5rem;
+            }
+    
+            form label {
+                font-weight: bold;
+                width: 100%;
+                text-align: right;
+            }
+    
+            form input, form textarea {
+                resize: vertical;                
+                width: 100%;                
+                min-width: 100%;
+                max-width: 100%;
+                padding: 0 1vw;
+            }
+
+            form input[type="submit"] {
+                grid-column: 1 / -1;
+                padding: .25vh;
+                width: 35vw;
+                min-width: 35vw;
+                max-width: 35vw;
+                margin: 1vh auto;
+            }
+
         /* #endregion */
 
         /* #region MIDSIZE & up footer */
@@ -749,6 +802,49 @@
 
             blockquote.right {
                 float: right;
+            }
+
+            table>tbody {
+                display: flex;
+                gap: 0;
+            }
+    
+            table * {
+                display: block;
+                min-width: fit-content;
+            }
+
+            table tr {
+                display: grid;
+                grid-template-columns: 4rem 1fr;
+                gap: 2vw;
+            }
+    
+            table th {
+                text-align: right;
+            }
+
+            form {
+                margin: 1rem auto;
+                width: 600px;
+                row-gap: .25rem;
+                column-gap: .5rem;
+            }
+    
+            form input, form textarea {
+                width: 100%;
+                max-width: 100%;
+                min-width: 100%;
+                padding: 0 .25rem;
+            }
+
+            form input[type="submit"] {
+                grid-column: 1 / -1;
+                padding: .25vh;
+                width: 40%;
+                min-width: 40%;
+                max-width: 50%;
+                margin: 1vh auto;
             }
         /* #endregion */
 
