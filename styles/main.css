@@ -700,13 +700,19 @@
             word-break: keep-all;
         }
 
-        figure.head img {
-            max-height: initial;
-        }
-
         img {
             max-height: 100vh;
         }
+
+        /* #region SMALL rm pgs */
+            article.room {
+                margin-top: 1rem;
+            }
+            
+            figure.head img {
+                max-height: initial;
+            }
+        /* #endregion */
 
         /* #region SMALL contact pg */
 
