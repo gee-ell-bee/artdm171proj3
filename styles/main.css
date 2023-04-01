@@ -247,10 +247,6 @@
         p+p {
             margin-top: 3vmin;
         }
-
-        h2+p {
-            margin-top: 5vh;
-        }
     
         /* #region MOBILE about pg */
 
@@ -419,6 +415,10 @@
                 h2.rm.desc {
                     font-weight: 500;
                     font-size: 1rem;
+                }
+
+                h2.rm+p {
+                    margin-top: 5vh;
                 }
 
                 section.features {
