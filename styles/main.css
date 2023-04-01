@@ -100,9 +100,8 @@
     /* #region MOBILE header */
         header {
             z-index: 100;
-            position: sticky;
-            position: -webkit-sticky;
-            top: -7.75rem;
+            position: static;
+            top: 0;
             background-image: url(../images/headerimg.jpg);
             width: 100%;
         }
@@ -739,7 +738,9 @@
         /* #region MIDSIZE & up header */
             header {
                 padding: 0;
-                /* top: -25%; */
+                position: sticky;
+                position: -webkit-sticky;
+                top: -8rem;
             }
 
             section.hdr.title {
@@ -838,6 +839,34 @@
                 section.about.beds figure {
                     float: left;
                     margin: 0 3vw 2vw 0;
+                }
+            /* #endregion */
+
+            /* #region MIDSIZE rm pgs */
+                section.rm.page.header {
+                    margin-bottom: 0;
+                }
+
+                h1.rm.page.header {
+                    font-size: 1.75rem;
+                }
+
+                h2.rm + p {
+                    margin-top: .75rem;
+                }
+
+                section.features {
+                    /* border: 1px solid; */
+                    margin: 2rem 1rem;
+                    display: flex;
+                    gap: 2rem;
+                }
+
+                section.features section {
+                    padding: 1rem;
+                    border: 1.5px solid var(--darkAccentColor);
+                    background-color:var(--lightAccentColor);
+                    
                 }
             /* #endregion */
 
@@ -955,6 +984,10 @@
     @media screen and (min-width: 750px) {
 
         /* #region TABLET & up header */
+
+            header {
+                top: -11rem;
+            }
 
             header h1.title, header h2.subtitle {
                 font-size: var(--hdrFontSzTab);
