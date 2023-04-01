@@ -407,7 +407,15 @@
                     margin: auto;
                     font-size: 80%;
                 }
+            
+                h1.rm.page.header {
+                    color: var(--bodyTxtColor);
+                    font-size: 1.125rem;
+                }
 
+                h2.rm.desc {
+                    font-size: 1rem;
+                }
 
             /* #endregion */
 
