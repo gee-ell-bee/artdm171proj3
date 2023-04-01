@@ -408,6 +408,29 @@
                     font-size: 80%;
                 }
 
+                section.rm.page.header figure {
+                    overflow: hidden;
+                }
+                
+                section.rm.page.header figure img.page.head {
+                    max-width: 200%;
+                    transition: all .125s ease-in-out;
+                }
+
+                section.rm.page.header figure img.page.head:hover {
+                    cursor: pointer;
+                    max-width: 220%;
+                    /* max-height: 200%; */
+                }
+
+                h1.rm.page.header {
+                    color: var(--bodyTxtColor);
+                    font-size: 1.125rem;
+                }
+
+                h2.rm.desc {
+                    font-size: 1rem;
+                }
 
             /* #endregion */
 
