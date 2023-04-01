@@ -408,12 +408,11 @@
                 }
 
                 section.rm.page.header figure {
-                    width: 100%;
-                    position: relative;
+                    overflow: scroll;
                 }
-
-                section.rm.page.header figure img {
-                    max-width: 150%;
+                
+                section.rm.page.header figure img.page.head {
+                    max-width: 300%;
                 }
             
                 h1.rm.page.header {
@@ -427,7 +426,7 @@
                 }
 
                 h2.rm+p {
-                    margin-top: 5vh;
+                    margin-top: 3vh;
                 }
 
                 section.features {
@@ -443,7 +442,7 @@
 
                 section.features ul {
                     margin: 1vh auto;
-                    padding: 0 0 0 1.25rem;
+                    padding: 0 0 0 1.5rem;
                     line-height: 1.25;
                 }
 
@@ -461,7 +460,7 @@
                         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.28);
                         
                         padding: .25vh;
-                        margin: 9vh 6vw;
+                        margin: 7vh 6vw;
                     }
 
                     a.button:hover, a.button:active {
@@ -485,7 +484,7 @@
                     section.back a.highlight {
                         display: inline-block;
                         opacity: .7;
-                        margin: 6vh auto auto auto;
+                        margin: auto;
                         font-size: .85rem;
                         text-align: left;
                         transition: all .125s ease-in-out;
