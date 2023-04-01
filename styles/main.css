@@ -36,6 +36,7 @@
                 --linkBorderColor: #ab744b;
                 --navBgColor: #f8b200;
                 --hlgtLinkColor: #cc0e26;
+                --hlgtLinkHvrColor: #9e0e26;
                 --rmCardBgColor: #feda97;
                 --rmCardLinkBgColor: #6b25022b;
             
@@ -181,52 +182,44 @@
             margin-top: 10vmin;
         }
 
+        /* #region MOBILE Content Header */
+            section.page.header {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 1vmin;
+            }
 
-        section.page.header {
-            display: flex;
-            flex-flow: column nowrap;
-            gap: 1vmin;
-        }
+            section.page.header h1 {
+                text-align: center;
+                font-weight: 600;
+                line-height: 1.25;
+                color: var(--hdrColor);
+            }
 
-        section.page.header h1 {
-            text-align: center;
-            font-weight: 600;
-            line-height: 1.25;
-            color: var(--hdrColor);
-        }
+            section.header h1.header {
+                font-size: var(--hdrFontSzMob);
+            }
 
-        section.header h1.header {
-            font-size: var(--hdrFontSzMob);
-        }
-
-        section.header h1.subheader {
-            text-transform: uppercase;
-            font-size: var(--subhdrFontSzMob);
-            line-height: 1.5;
-        }
+            section.header h1.subheader {
+                text-transform: uppercase;
+                font-size: var(--subhdrFontSzMob);
+                line-height: 1.5;
+            }
+        /* #endregion */
 
         img {
             margin: auto;
         }
 
-        figure+h2 {
-            margin-top: 1vmin;
-        }
-        
-        p+p {
-            margin-top: 3vmin;
+        blockquote {
+            margin: 7vmin 4vmin;
+            border-left: 10px solid var(--accentColor);
+            padding: 4vmin 7vmin;
+            background: var(--blockqtBgColor);
         }
 
         section.hilgtdLink {
             margin: 4vmin 0;
-        }
-
-        section.about+section.about {
-            margin-top: 7vmin;
-        }
-
-        section.about>section.hilgtdLink {
-            margin: 0 0 4vmin 0;
         }
 
         a.highlight {
@@ -242,132 +235,59 @@
             -webkit-font-smoothing:none;
         }
 
-        section.testimonials {
-            display: flex;
-            flex-flow: column nowrap;
-            gap: 5vmin;
-            margin: 7vmin auto;
+        a.highlight:hover {
+            opacity: 1;
+            text-decoration: underline;
+            /* color: var(--hlgtLinkHvrColor); */
         }
 
-        blockquote {
-            margin: 7vmin 4vmin;
-            border-left: 10px solid var(--accentColor);
-            padding: 4vmin 7vmin;
-            background: var(--blockqtBgColor);
-        }
-
-        blockquote.testimon {
-            color: #0d2f4d;
-            font-family: cabrito-didone-condensed, sans-serif;
-            font-weight: 500;
-            font-style: italic;
-               
-            line-height: 1.5;
-            margin: 1%;
-        }
-
-        blockquote.contact {
-            word-wrap:normal;
-            display: flex;
-            flex-flow: column nowrap;
-            row-gap: 2vh;
+        figure+h2 {
+            margin-top: 1vmin;
         }
         
-        blockquote.right {
-            border-left: 0px;
-            border-right: 10px solid var(--accentColor);
+        p+p {
+            margin-top: 3vmin;
         }
+    
+        /* #region MOBILE about pg */
 
-        .quoted {
-            display: block;
-            margin-top: 2vmin;
-            text-align: right;
-            font-size: .75rem;
-        }
-
-        table>tbody {
-            display: flex;
-            flex-flow: row wrap;
-        }
-
-        table * {
-            display: block;
-            min-width: fit-content;
-        }
-
-        table th {
-            text-align: left;
-        }
-
-        table td {
-            width: 100%;
-        }
-
-        section.contact {
-            margin: auto auto 2vh auto;
-        }
-
-        section.contact section.map {
-            overflow-x: scroll;
-        }
-
-        blockquote section.email {
-            word-wrap: break-word;
-        }
-
-        span.label {
-            font-weight:bold;
-        }
-
-        /* #region MOBILE forms */
-
-            form {
-                border: 1.5px solid black;
-                background-color: var(--lightAccentColor);
-                padding: 2vh 6vw;
+            section.about+section.about {
+                margin-top: 7vmin;
             }
 
-            form label {
-                font-weight: bold;
-                width: fit-content;
+            section.about>section.hilgtdLink {
+                margin: 0 0 4vmin 0;
             }
 
-            form input, form textarea {
-                width: 100%;
-                max-width: 100%;
-                min-width: 100%;
-                padding: 0 3vw;
+            section.testimonials {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 5vmin;
+                margin: 7vmin auto;
             }
 
-            form textarea {
-                overflow: auto;
-                min-height: 2rem;
+            blockquote.testimon {
+                color: #0d2f4d;
+                font-family: cabrito-didone-condensed, sans-serif;
+                font-weight: 500;
+                font-style: italic;
+                
+                line-height: 1.5;
+                margin: 1%;
+            }
+            
+            blockquote.right {
+                border-left: 0px;
+                border-right: 10px solid var(--accentColor);
             }
 
-            form .input {
-                margin-bottom: 1vh;
+            .quoted {
+                display: block;
+                margin-top: 2vmin;
+                text-align: right;
+                font-size: .75rem;
             }
-
-            form .button {
-                cursor: pointer;
-                margin: 1vh auto 1vh auto;
-
-                color: var(--hlgtLinkColor);
-                font-weight: bold;
-                font-size: 1.05rem;
-
-                border: 1.5px solid var(--linkBorderColor);
-                border-radius: 0;
-                background-color:var(--rmCardBgColor);
-                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.28);
-            }
-
         /* #endregion */
-
-        iframe {
-            margin-top: 2vh;
-        }
-
 
             /* #region MOBILE rooms cards */
                 #rooms {
@@ -428,7 +348,6 @@
                 section.rmdesc {
                     position: relative;
                     height: auto;
-                    /* top: 200px; */
                 }
 
                 a.roomlnk {
@@ -441,6 +360,9 @@
                 }
 
                 a.roomlnk:hover {
+                    text-decoration: none;
+                    opacity: .7;
+                    color: var(--hlgtLinkColor);
                     background-color: var(--rmCardLinkBgColor);
                 }
 
@@ -479,6 +401,143 @@
                     text-align: left;
                 }
             /* #endregion */
+        
+            /* #region MOBILE room pgs */
+                section.breadcrumbs {
+                    margin: auto;
+                    font-size: 80%;
+                }
+
+
+            /* #endregion */
+
+        /* #region MOBILE specials pg */
+            section.info.center {
+                margin: 2vh auto;
+                padding: 2vw;
+
+                background-color:hsla(0, 100%, 100%, .5);
+                border: 1.5px solid var(--darkAccentColor);
+            }
+
+            section#specials {
+                display: grid;
+                gap: 2vh;
+            }
+
+            section#specials h2 {
+                font-size: 1rem;
+            }
+        /* #endregion */
+
+        /* #region MOBILE contact pg */
+            blockquote.contact {
+                word-wrap:normal;
+                display: flex;
+                flex-flow: column nowrap;
+                row-gap: 2vh;
+            }
+
+            table>tbody {
+                display: flex;
+                flex-flow: row wrap;
+            }
+
+            table * {
+                display: block;
+                min-width: fit-content;
+            }
+
+            table th {
+                text-align: left;
+            }
+
+            table td {
+                width: 100%;
+            }
+
+            section.contact {
+                margin: auto auto 2vh auto;
+            }
+
+            section.contact section.map {
+                overflow-x: scroll;
+            }
+
+            blockquote section.email {
+                word-wrap: break-word;
+            }
+
+            span.label {
+                font-weight:bold;
+            }
+
+            section.contact.form {
+                margin-bottom: 4vh;
+            }
+
+            /* #region MOBILE forms */
+
+                form {
+                    border: 1.5px solid black;
+                    background-color: var(--lightAccentColor);
+                    padding: 2vh 6vw;
+                }
+    
+                form label {
+                    font-weight: bold;
+                    width: fit-content;
+                }
+    
+                form input, form textarea {
+                    width: 100%;
+                    max-width: 100%;
+                    min-width: 100%;
+                    padding: 0 3vw;
+                }
+    
+                form textarea {
+                    overflow: auto;
+                    min-height: 2rem;
+                }
+    
+                form .input {
+                    margin-bottom: 1vh;
+                }
+    
+                form .button {
+                    cursor: pointer;
+                    margin: 1vh auto 1vh auto;
+    
+                    color: var(--hlgtLinkColor);
+                    font-weight: bold;
+                    font-size: 1.05rem;
+    
+                    border: 1.5px solid var(--linkBorderColor);
+                    border-radius: 2px;
+                    background-color:var(--rmCardBgColor);
+                    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.28);
+                }
+    
+                form .button:hover {
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+                }
+    
+                form .button:active {
+                    box-shadow: none;
+                }
+        
+            /* #endregion */
+
+            section.contact h2 {
+                font-size: 1.25rem;
+            }
+
+            iframe {
+                margin-top: 2vh;
+            }
+
+        /* #endregion */
 
     /* #endregion */
 
@@ -553,14 +612,32 @@
             word-break: keep-all;
         }
 
-        table>tbody {
-            gap: 2vmin;
-            width: 100%;
+        figure.head img {
+            max-height: initial;
         }
 
-        table>tbody * {
-            width: 100%;
+        img {
+            max-height: 100vh;
         }
+
+        /* #region SMALL contact pg */
+
+            table>tbody {
+                gap: 2vmin;
+                width: 100%;
+            }
+
+            table>tbody * {
+                width: 100%;
+            }
+
+        /* #endregion */
+
+        /* #region SMALL specials pg */
+            section.info.center {
+                margin: 2vh 2vh 4vh 2vh;
+            }
+        /* #endregion */
     }
     /* #endregion */
 
@@ -642,73 +719,114 @@
                 padding: 1rem 2rem;
             }
 
-            blockquote.testimon {
-                color: #0d2f4d;
-                font-family: cabrito-didone-condensed, sans-serif;
-                font-weight: 500;
-                font-style: italic;
-                font-size: 1.05rem;
-                   
-                line-height: 1.5;
-                margin: 2%;
-            }
+            /* #region MIDSIZE about pg */
+                section.testimonials {
+                    margin: 4vmin auto;
+                    gap: 1vh;
+                }
 
-            .quoted {
-                display: block;
-                text-align: right;
-                font-size: .9rem;
-            }
+                blockquote.testimon {
+                    color: #0d2f4d;
+                    font-family: cabrito-didone-condensed, sans-serif;
+                    font-weight: 500;
+                    font-style: italic;
+                    font-size: 1.05rem;
+                    
+                    line-height: 1.5;
+                    margin: 2%;
+                }
 
-            table>tbody {
-                display: flex;
-                gap: 0;
-            }
-    
-            table * {
-                display: block;
-                min-width: fit-content;
-            }
+                .quoted {
+                    display: block;
+                    text-align: right;
+                    font-size: .9rem;
+                }
 
-            table tr {
-                display: grid;
-                grid-template-columns: 4rem 1fr;
-                gap: 2vw;
-            }
+                section.about.beds figure {
+                    float: left;
+                    margin: 0 3vw 2vw 0;
+                }
+            /* #endregion */
 
-            table th {
-                text-align: right;
-            }
+            /* #region MIDSIZE specials pg */
+                section.info.center {
+                    margin: auto 5vh 5vh 5vh;
+                    border: 2px solid var(--darkAccentColor);
+                }
 
-            form {
-                padding: 3vh 6vw;
-                display: grid;
-                grid-template-columns: 1fr 4fr;
-                max-width: 100%;
-                column-gap: .5rem;
-            }
-    
-            form label {
-                font-weight: bold;
-                width: 100%;
-                text-align: right;
-            }
-    
-            form input, form textarea {
-                resize: vertical;                
-                width: 100%;                
-                min-width: 100%;
-                max-width: 100%;
-                padding: 0 1vw;
-            }
+                section#specials {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 4vh;
+                }
 
-            form input[type="submit"] {
-                grid-column: 1 / -1;
-                padding: .25vh;
-                width: 35vw;
-                min-width: 35vw;
-                max-width: 35vw;
-                margin: 1vh auto;
-            }
+                section#specials h2 {
+                    font-size: 1.25rem;
+                    margin-bottom: .25rem;
+                }
+
+                section#specials section {
+                    background-color: var(--lightAccentColor);
+                    border: 1.5px solid var(--darkAccentColor);
+                    padding: 3vw;
+                }
+            /* #endregion */
+
+            /* #region MIDSIZE contact pg */
+                table>tbody {
+                    display: flex;
+                    gap: 0;
+                }
+        
+                table * {
+                    display: block;
+                    min-width: fit-content;
+                }
+
+                table tr {
+                    display: grid;
+                    grid-template-columns: 4rem 1fr;
+                    gap: 2vw;
+                }
+
+                table th {
+                    text-align: right;
+                }
+
+                /* #region MIDSIZE forms */
+
+                    form {
+                        padding: 3vh 6vw;
+                        display: grid;
+                        grid-template-columns: 1fr 4fr;
+                        max-width: 100%;
+                        column-gap: .5rem;
+                    }
+            
+                    form label {
+                        font-weight: bold;
+                        width: 100%;
+                        text-align: right;
+                    }
+            
+                    form input, form textarea {
+                        resize: vertical;                
+                        width: 100%;                
+                        min-width: 100%;
+                        max-width: 100%;
+                        padding: 0 1vw;
+                    }
+
+                    form input[type="submit"] {
+                        grid-column: 1 / -1;
+                        padding: .25vh;
+                        width: 35vw;
+                        min-width: 35vw;
+                        max-width: 35vw;
+                        margin: 1vh auto;
+                    }
+                /* #endregion */
+
+            /* #endregion */
 
         /* #endregion */
 
@@ -757,95 +875,156 @@
 
         /* #region TABLET & up content */
 
-            article {
-                margin: 3vmin;
-            }
-
-            section.header h1.hdg {
-                font-size: var(--hdrFontSzTab);
-            }
-
-            section.header h1.sub {
-                font-size: var(--subhdrFontSzTab);
-                padding: 0;
-            }
-
-            section.header {
-                margin: 1rem 0;
-            }
-
-            section.about.beds figure {
-                float:left;
-                margin: 0 1rem 1rem 0;
-                max-width: 50%;
-            }
-
-            section.about.provincetown {
+            main {
                 margin: auto;
             }
 
-            section.about.beds>h2 {
-                margin-top: 0;
+            article {
+                margin: 1.5rem;
             }
 
+            /* #region TABLET header */
+                section.header h1.hdg {
+                    font-size: var(--hdrFontSzTab);
+                }
+
+                section.header h1.sub {
+                    font-size: var(--subhdrFontSzTab);
+                    padding: 0;
+                }
+
+                section.header {
+                    margin: 1rem 0;
+                }
+
+            /* #endregion */
+            
             a.highlight {
-                margin: 1rem auto;
-            }
-
-            a.roomlnk {
-                margin: .5rem 0 0 0;
+                width: fit-content;
+                margin: auto;
             }
 
             blockquote {
-                max-width: 80vw;
+                max-width: 60vw;
             }
 
-            blockquote.right {
-                float: right;
-            }
+            /* #region TABLET about pg */
+                section.about+section.about {
+                    margin-top: 1rem;
+                }
 
-            table>tbody {
-                display: flex;
-                gap: 0;
-            }
-    
-            table * {
-                display: block;
-                min-width: fit-content;
-            }
+                section.about>section.hilgtdLink {
+                    margin: 1rem auto;
+                }
 
-            table tr {
-                display: grid;
-                grid-template-columns: 4rem 1fr;
-                gap: 2vw;
-            }
-    
-            table th {
-                text-align: right;
-            }
+                section.testimonials {
+                    display: flow-root;
+                    margin: 1rem auto;
+                }
 
-            form {
-                margin: 1rem auto;
-                width: 600px;
-                row-gap: .25rem;
-                column-gap: .5rem;
-            }
-    
-            form input, form textarea {
-                width: 100%;
-                max-width: 100%;
-                min-width: 100%;
-                padding: 0 .25rem;
-            }
+                blockquote.right {
+                    float: right;
+                }
 
-            form input[type="submit"] {
-                grid-column: 1 / -1;
-                padding: .25vh;
-                width: 40%;
-                min-width: 40%;
-                max-width: 50%;
-                margin: 1vh auto;
-            }
+                section.about.beds figure {
+                    float: left;
+                    margin: 0 1rem 1rem 0;
+                    max-width: 50%;
+                }
+
+                section.about.beds>h2 {
+                    margin-top: 0;
+                }
+
+                section.about.provincetown {
+                    margin: auto;
+                }
+
+            /* #endregion */
+
+            /* #region TABLET rooms home pg */
+                a.roomlnk {
+                    margin: .5rem 0 0 0;
+                    padding: 0 1rem;
+                }
+            /* #endregion */
+
+            /* #region TABLET specials pg */
+                section.info.center {
+                    width: 65vw;
+                    max-width: 800px;
+                    margin: auto auto 2rem auto;
+                }
+            /* #endregion */
+            
+            /* #region TABLET contact pg */
+
+                blockquote.contact {
+                    margin: 1.5rem 7%;
+                }
+
+                table>tbody {
+                    display: flex;
+                    gap: 0;
+                }
+        
+                table * {
+                    display: block;
+                    min-width: fit-content;
+                }
+
+                table tr {
+                    display: grid;
+                    grid-template-columns: 4rem 1fr;
+                    gap: .5rem;
+                }
+        
+                table th {
+                    text-align: right;
+                }
+
+                section.contact.form {
+                    margin-bottom: 1.5rem;
+                }
+
+                /* #region TABLET forms */
+
+                    form {
+                        margin: 1rem auto;
+                        padding: 2rem;
+                        width: 600px;
+                        row-gap: .25rem;
+                        column-gap: .5rem;
+                    }
+            
+                    form input, form textarea {
+                        width: 100%;
+                        max-width: 100%;
+                        min-width: 100%;
+                        padding: 0 .25rem;
+                    }
+
+                    form textarea {
+                        height: 5rem;
+                    }
+
+                    form input[type="submit"] {
+                        grid-column: 1 / -1;
+                        padding: .125rem;
+                        width: 40%;
+                        min-width: 40%;
+                        max-width: 50%;
+                        margin: .5rem auto;
+                    }
+
+                /* #endregion */
+
+                iframe {
+                    margin-top: 1rem;
+                }
+
+            /* #endregion */
+
         /* #endregion */
 
         /* #region TABLET & up footer */
@@ -878,6 +1057,15 @@
 
         a.roomlnk {
             background-color: transparent;
+        }
+
+        section.info.center {
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        section#specials {
+            grid-template-columns: 1fr 1fr 1fr;
         }
     }
     /* #endregion */
