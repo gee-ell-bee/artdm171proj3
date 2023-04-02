@@ -21,9 +21,9 @@
             --hdrFontSzMob: 1.5rem;
             --hdrFontSzMid: 2rem;
             --hdrFontSzTab: 3rem;
-            --subhdrFontSzMob: .9rem;   /* proportional size based on styletile for hdrFontSzMob */
-            --subhdrFontSzMid: 1rem;    /* ((x / 1.5rem) = (24px/44px)) = approx .82rem */
-            --subhdrFontSzTab: 1.25rem; /*    "      "   = (24px/60px)) = approx .6rem */
+            --subhdrFontSzMob: 1rem;   /* proportional size based on styletile for hdrFontSzMob */
+            --subhdrFontSzMid: 1.25rem;    /* ((x / 1.5rem) = (24px/44px)) = approx .82rem */
+            --subhdrFontSzTab: 1.5rem; /*    "      "   = (24px/60px)) = approx .6rem */
                                         /* ((x / 2rem))  =    "    "    = approx .8rem */
 
             /* headers */
@@ -36,7 +36,6 @@
                 --linkBorderColor: #ab744b;
                 --navBgColor: #f8b200;
                 --hlgtLinkColor: #cc0e26;
-                --hlgtLinkHvrColor: #9e0e26;
                 --rmCardBgColor: #feda97;
                 --rmCardLinkBgColor: #6b25022b;
             
@@ -44,7 +43,6 @@
                 --blockqtBgColor: #f5f5f5;
             
             /* misc */
-                --formInputBgColor: #ffffff;
                 --accentBgColor: #e3eaed;
                 --lightAccentColor: hsl(194, 36%, 80%);
                 --accentColor: #8abac8;
@@ -197,7 +195,7 @@
             }
 
             section.header h1.header {
-                font-size: var(--hdrFontSzMob);
+                font-size: 1.75rem;
             }
 
             section.header h1.subheader {
@@ -206,6 +204,10 @@
                 line-height: 1.5;
             }
         /* #endregion */
+
+        main h2 {
+            color: var(--subhdrColor);
+        }
 
         img {
             margin: auto;
@@ -363,6 +365,10 @@
 
                 section.rm.page.header figure {
                     overflow: scroll;
+                }
+                
+                section.rm.page.header figure:hover {
+                    cursor: ew-resize;
                 }
                 
                 section.rm.page.header figure img.page.head {
@@ -589,6 +595,7 @@
 
             iframe {
                 margin-top: 2vh;
+                border: 1px solid;
             }
 
         /* #endregion */
@@ -750,29 +757,31 @@
             height: 450px;
         }
 
-        section.burgyork {
-            background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room2.png) 50% -15%;
-        }
+        /* #region SPECIAL RMS card pic bgs */
+            section.burgyork {
+                background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room2.png) 50% -15%;
+            }
 
-        section.capwks {
-            background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room1.png) 70% -10%;
-        }
+            section.capwks {
+                background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room1.png) 70% -10%;
+            }
 
-        section.drwill {
-            background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room3.png) 20% -10%;
-        }
+            section.drwill {
+                background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room3.png) 20% -10%;
+            }
 
-        section.drrl {
-            background:var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room4.png) 100% -10%;
-        }
+            section.drrl {
+                background:var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room4.png) 100% -10%;
+            }
 
-        section.thadth {
-            background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room5.png) 0% -15%;
-        }
+            section.thadth {
+                background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room5.png) 0% -15%;
+            }
 
-        section.jarvdns {
-            background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room6.png) 80% -20%;
-        }
+            section.jarvdns {
+                background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room6.png) 80% -20%;
+            }
+        /* #endregion */
 
         a.roomlnk {
             font-size: 1rem;
@@ -881,11 +890,11 @@
             }
             
             section.header h1.header {
-                font-size: var(--hdrFontSzTab);
+                font-size: 2.5rem;
             }
 
             section.header h1.subheader {
-                font-size: var(--subhdrFontSzTab);
+                font-size: var(--subhdrFontSzMid);
             }
 
             a.highlight {
@@ -1013,7 +1022,7 @@
                 }
 
                 section#specials section {
-                    background-color: var(--lightAccentColor);
+                    background-color: var(--accentBgColor);
                     border: 1.5px solid var(--darkAccentColor);
                     padding: 3vw;
                 }
@@ -1136,11 +1145,11 @@
             }
 
             /* #region TABLET page header */
-                section.header h1.hdg {
-                    font-size: var(--hdrFontSzTab);
+                section.header h1.header {
+                    font-size: 3.5rem;
                 }
 
-                section.header h1.sub {
+                section.header h1.subheader {
                     font-size: var(--subhdrFontSzTab);
                     padding: 0;
                 }
@@ -1152,12 +1161,13 @@
             /* #endregion */
             
             a.highlight {
-                width: fit-content;
+                width: 100%;
                 margin: auto;
             }
 
             blockquote {
                 max-width: 60vw;
+                border-left: 15px solid var(--accentColor);
             }
 
             /* #region TABLET about pg */
