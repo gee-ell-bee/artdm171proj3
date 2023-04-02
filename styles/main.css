@@ -289,116 +289,70 @@
         /* #endregion */
 
         /* #region MOBILE rooms cards */
-                #rooms {
-                    display: grid;
-                    margin: 1rem auto;
-                    grid-template-columns:repeat(auto-fill, minmax(325px, 2fr));
-                    grid-template-rows: repeat(6, auto);
-                    justify-content: center;
-                }
 
-                section.rmbox {
-                    margin: .5rem;
-                    padding: 20px;
-                    background-color: var(--accentColor);
-                }
+            #rooms {
+                margin: 1.5rem auto auto auto;
+            }
 
-                section.rmbox>section {
-                    padding: 3vmin;
-                }
+            a.roomlnk {
+                display: inline-block;
+                margin: 3vmin 0 0 0;
+                width: 100%;
+                border-radius: .25rem;
+                font-size: .8rem;
+                background-color: var(--rmCardLinkBgColor);
+            }
 
-                section.rmbox>section {
-                    height: 450px;
-                    border: 1px solid black;
-                    display: flex;
-                    flex-flow: column nowrap;
-                    justify-content: space-between;
-                }
+            a.roomlnk:hover {
+                text-decoration: none;
+                opacity: .7;
+                color: var(--hlgtLinkColor);
+                background-color: var(--rmCardLinkBgColor);
+            }
 
-                section.center {
-                    text-align: center;
-                    display: block;
-                }
+            section.rmbox {
+                margin: 2vmax auto;
+                padding: 3vmax;
+                background-color: var(--accentColor);
+            }
+    
+            section.rmbox>section {
+                padding: 3vmin;
+            }
+    
+            section.rmbox>section {
+                height: auto;
+                border: 1px solid black;
+                background-color: var(--rmCardBgColor);
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+            }
+    
+            section.center {
+                text-align: center;
+                display: block;
+            }
 
-                section.burgyork {
-                    background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room2.png) 50% -15%;
-                }
+            section.rmbox>section>a:hover {
+                text-decoration: none;
+            }
 
-                section.capwks {
-                    background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room1.png) 70% -10%;
-                }
+            a.rmsblkbg, a.rmswhtbg {
+                color: black;
+                font-family: kepler-std-display;
+                font-weight: 700;
+                font-style: italic;
+                font-size: 1.125rem;
+                text-align: left;
+            }
 
-                section.drwill {
-                    background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room3.png) 20% -10%;
-                }
-
-                section.drrl {
-                    background:var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room4.png) 100% -10%;
-                }
-
-                section.thadth {
-                    background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room5.png) 0% -15%;
-                }
-
-                section.jarvdns {
-                    background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room6.png) 80% -20%;
-                }
-
-                section.rmdesc {
-                    position: relative;
-                    height: auto;
-                }
-
-                a.roomlnk {
-                    display: inline-block;
-                    margin: 3vmin 0 0 0;
-                    width: 100%;
-                    border-radius: .25rem;
-                    font-size: 1rem;
-                    background-color: var(--rmCardLinkBgColor);
-                }
-
-                a.roomlnk:hover {
-                    text-decoration: none;
-                    opacity: .7;
-                    color: var(--hlgtLinkColor);
-                    background-color: var(--rmCardLinkBgColor);
-                }
-
-                a.rmsblkbg, a.rmswhtbg {
-                    color: black;
-                    font-family: kepler-std-display;
-                    font-weight: 700;
-                    font-style: italic;
-                    font-size: 1.5em;
-                    text-shadow: 1px 1px 7px hsla(0, 100%, 0%, .5);
-                    text-align: left;
-                }
-                
-                a.rmsblkbg:hover {
-                    opacity: 1;
-                    text-shadow: 0px 0px 5px hsla(0, 100%, 0%, .75);
-                    text-decoration: none;
-                }
-                
-                a.rmswhtbg:hover {
-                    text-decoration: none;
-                    opacity: 1;
-                    text-shadow: 0px 0px 5px hsla(0, 100%, 100%, .75);
-                }
-                
-                a.rmsblkbg:active {
-                    text-shadow: 1px 1px 7px hsla(0, 100%, 0%, .5);
-                }
-                
-                a.rmswhtbg:active {
-                    text-shadow: 1px 1px 7px hsla(0, 100%, 100%, .5);
-                }
-                
-                a.rmswhtbg {
-                    text-shadow: 1px 1px 7px hsla(0, 100%, 100%, .5);
-                    text-align: left;
-                }
+            section.rmdesc {
+                position: relative;
+                margin: 1vmax;
+                height: auto;
+                font-size: .8rem;
+            }
             /* #endregion */
         
             /* #region MOBILE room pgs */
@@ -716,6 +670,14 @@
             max-height: 100vh;
         }
 
+        a.roomlnk {
+            font-size: 1rem;
+        }
+
+        section.rmbox {
+            margin: 3vh auto;
+        }
+
         /* #region SMALL rm pgs */
             article.room {
                 margin-top: 1rem;
@@ -765,6 +727,92 @@
     
         footer {
             font-size: .8rem;
+        }
+    }
+    /* #endregion */
+
+    /* #region SPECIAL ROOMS HOME PAGE SMALLER & up media query */
+    @media screen and (min-width: 330px) {
+        #rooms {
+            display: grid;
+            margin: 1rem auto;
+            grid-template-columns:repeat(auto-fill, minmax(325px, 2fr));
+            grid-template-rows: repeat(6, auto);
+            justify-content: center;
+        }
+
+        section.rmbox {
+            margin: .5rem;
+            padding: 20px;
+        }
+
+        section.rmbox>section {
+            height: 450px;
+        }
+
+        section.burgyork {
+            background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room2.png) 50% -15%;
+        }
+
+        section.capwks {
+            background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room1.png) 70% -10%;
+        }
+
+        section.drwill {
+            background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room3.png) 20% -10%;
+        }
+
+        section.drrl {
+            background:var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room4.png) 100% -10%;
+        }
+
+        section.thadth {
+            background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room5.png) 0% -15%;
+        }
+
+        section.jarvdns {
+            background: var(--rmCardBgColor) no-repeat url(../images/rooms/squares/room6.png) 80% -20%;
+        }
+
+        a.roomlnk {
+            font-size: 1rem;
+        }
+
+        section.rmdesc {
+            position: relative;
+            height: auto;
+            margin: 0;
+            font-size: .9rem;
+        }
+
+        a.rmsblkbg, a.rmswhtbg {
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 7px hsla(0, 100%, 0%, .5);
+        }
+        
+        a.rmsblkbg:hover {
+            opacity: 1;
+            text-shadow: 0px 0px 5px hsla(0, 100%, 0%, .75);
+            text-decoration: none;
+        }
+        
+        a.rmswhtbg:hover {
+            text-decoration: none;
+            opacity: 1;
+            text-shadow: 0px 0px 5px hsla(0, 100%, 100%, .75);
+        }
+        
+        a.rmsblkbg:active {
+            text-shadow: 1px 1px 7px hsla(0, 100%, 0%, .5);
+        }
+        
+        a.rmswhtbg:active {
+            text-shadow: 1px 1px 7px hsla(0, 100%, 100%, .5);
+        }
+        
+        a.rmswhtbg {
+            text-shadow: 1px 1px 7px hsla(0, 100%, 100%, .5);
+            text-align: left;
         }
     }
     /* #endregion */
@@ -1200,6 +1248,7 @@
                     font-size: 1rem;
                 }
             /* #endregion */
+            
             /* #region TABLET specials pg */
                 section.info.center {
                     width: 65vw;
